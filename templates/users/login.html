@@ -1,0 +1,192 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>域名管理系统 | 登录</title>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="{% static 'adminlte/plugins/fontawesome-free/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'adminlte/dist/css/adminlte.min.css' %}">
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+    <div class="card card-outline card-primary">
+        <div class="card-header text-center">
+            <a href="#" class="h1">域名管理系统</a>
+        </div>
+        <div class="card-body">
+            <p class="login-box-msg">Sign in to start your session</p>
+            <form id="quickForm" action="" method="post">
+                {% csrf_token %}
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-user"></span>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="用户名" name="username">
+                    <span class="username-error" style="color:#b14442">{{ form_obj.username.errors.0 }}</span>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+                    <input type="password" class="form-control" placeholder="密码" name="password">
+                    <span class="password-error" style="color:#b14442">{{ form_obj.password.errors.0 }}</span>
+                </div>
+                <div class="row">
+                    <div class="col-sm-7">
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control" placeholder="验证码" name="authcode">
+                            <span class="glyphicon glyphicon-barcode form-control-feedback"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <img id="authImg" src="{% url 'users:get_auth_img' %}" alt="验证码">
+                    </div>
+                    <span class="authImg-error" style="color:#b14442">{{ form_obj.authcode.errors.0 }}</span>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <div class="icheck-primary">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">
+                                记住密码
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <button type="submit" id="loginBtn" class="btn btn-primary btn-block btn-flat">登录</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="social-auth-links text-center mt-2 mb-3">
+                <a href="#" class="btn btn-block btn-primary">
+                    <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
+                </a>
+                <a href="#" class="btn btn-block btn-danger">
+                    <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
+                </a>
+            </div>
+            <p class="mb-1">
+                <a href="#">忘记密码</a>
+            </p>
+            <p class="mb-0">
+                <a href="{% url 'users:register' %}" class="text-center">注册账户</a>
+            </p>
+        </div>
+    </div>
+</div>
+<script src="{% static 'adminlte/plugins/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'adminlte/plugins/jquery-validation/jquery.validate.min.js' %}"></script>
+<script src="{% static 'adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'adminlte/dist/js/adminlte.min.js' %}"></script>
+
+<script>
+    $(function () {
+        $('#quickForm').validate({
+            rules: {
+                username: {
+                    required: true,
+                },
+                password: {
+                    required: true,
+                    minlength: 6
+                },
+                authcode: {
+                    required: true
+                },
+            },
+            messages: {
+                username: {
+                    required: "请输入用户名",
+                },
+                password: {
+                    required: "请输入密码",
+                    minlength: "密码不能小于6个字符"
+                },
+                authcode: "请输入验证码"
+            },
+            errorElement: 'span',
+            errorPlacement: function (error, element) {
+                error.addClass('invalid-feedback');
+                element.closest('.form-group').append(error);
+            },
+            highlight: function (element, errorClass, validClass) {
+                $(element).addClass('is-invalid');
+            },
+            unhighlight: function (element, errorClass, validClass) {
+                $(element).removeClass('is-invalid');
+            }
+        });
+    });
+
+    // 验证码刷新
+    $("#authImg").on("click", function () {
+        $("#authImg")[0].src += "?" // 点击事件刷新验证码图片
+    })
+</script>
+{#<script>#}
+{#    $('#loginBtn').click(function () {#}
+{#        $('.username-error').empty();#}
+{#        $('.password-error').empty();#}
+{#        $('.authImg-error').empty();#}
+{##}
+{#        var username = $("input[name=username]").val();#}
+{#        var password = $("input[name=password]").val();#}
+{#        var authcode = $("input[name=authcode]").val();#}
+{#        var csrf_token = $("input[name=csrfmiddlewaretoken]").val();#}
+{#        if (!username) {#}
+{#            $('.username-error').text('账号不能为空！')#}
+{#        }#}
+{#        if (!password) {#}
+{#            $('.password-error').text('密码不能为空！')#}
+{#        }#}
+{#        if (!authcode) {#}
+{#            $('.authImg-error').text('请输入验证码')#}
+{#        }#}
+{#        $.ajax({#}
+{#            url: "{% url 'login' %}",#}
+{#            type: 'post',#}
+{#            data: {#}
+{#                username: username,#}
+{#                password: password,#}
+{#                authcode: authcode,#}
+{#                csrfmiddlewaretoken: csrf_token,#}
+{#            },#}
+{#            contentType: "application/x-www-form-urlencoded",#}
+{#            success: function (res) {#}
+{#                if (res.status === "1") {#}
+{#                    $(".authImg-error").text("验证码错误！")#}
+{#                }#}
+{#                if (res.status === "2") {#}
+{#                    var href = location.search.slice(6);  //使用了auth的装饰器，会记录未登录用户想要访问的登录页面，登录成功后，会自动跳转过去#}
+{#                    if (href) {#}
+{#                        location.href = href  //登录成功，有目标地址#}
+{#                    } else {#}
+{#                        location.href = "{% url 'index' %}"  // 登录成功没有目标地址，跳转主页#}
+{#                    }#}
+{#                }#}
+{#                if (res.status === "3") {  // 帐号密码错误#}
+{#                    $(".username-error").text("账号或密码错误！")#}
+{#                }#}
+{#            }#}
+{#        })#}
+{##}
+{#    });#}
+{#    // 验证码刷新#}
+{#    $("#authImg").on("click", function () {#}
+{#        $("#authImg")[0].src += "?" // 点击事件刷新验证码图片#}
+{#    })#}
+{##}
+{##}
+{#</script>#}
+</body>
+</html>

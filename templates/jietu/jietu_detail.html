@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}域名截图{% endblock %}
+{% block content %}
+    <div class="content-wrapper" style="min-height: 1369px;">
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>{{ domain }}|{{ jietu.domain.expiration_date }}</h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active">{{ domain }}</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="card card-solid">
+                <div class="card-body">
+                    <div class="row mt-4">
+                        <nav class="w-100">
+                            <div class="nav nav-tabs" id="product-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab"
+                                   href="#product-desc" role="tab" aria-controls="product-desc" aria-selected="false">网页描述</a>
+                                {#                                <a class="nav-item nav-link" id="product-comments-tab" data-toggle="tab"#}
+                                {#                                   href="#product-comments" role="tab" aria-controls="product-comments"#}
+                                {#                                   aria-selected="false">Comments</a>#}
+                                {#                                <a class="nav-item nav-link " id="product-rating-tab" data-toggle="tab"#}
+                                {#                                   href="#product-rating" role="tab" aria-controls="product-rating"#}
+                                {#                                   aria-selected="true">Rating</a>#}
+                            </div>
+                        </nav>
+                        <div class="tab-content p-3" id="nav-tabContent">
+                            <div class="tab-pane fade active show" id="product-desc" role="tabpanel"
+                                 aria-labelledby="product-desc-tab">
+                                {{ jietu.content }}
+                            </div>
+
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-12 col-sm-8">
+                            <div class="col-12">
+                                <img src="{{ jietu.image.url }}" class="product-image" alt="Product Image">
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <h3>domain date:{{ jietu.domain.expiration_date }}</h3>
+                            <div class="mt-4">
+                                <a href="https://web.archive.org/web/{{ date_str }}/{{ domain }} " target="_blank">
+                                    <div class="btn btn-primary btn-lg btn-flat">
+                                        <i class="fas fa-coffee fa-lg mr-2"></i>
+                                        archive中打开
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mt-4">
+                                <a href="https://www.google.com/search?q=site:{{ domain }}" target="_blank">
+                                    <div class="btn btn-primary btn-lg btn-flat">
+                                        <i class="fas fa-coffee fa-lg mr-2"></i>
+                                        Google site
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mt-4">
+                                <div class="btn btn-default btn-lg btn-flat">
+                                    <i class="fas fa-heart fa-lg mr-2"></i>
+                                    Add to Wishlist
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+    </div>
+{% endblock content %}

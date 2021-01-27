@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}{{ expiration_date }}{{ domaintype }}截图{% endblock %}
+{% block content %}
+    <div class="content-wrapper" style="min-height: 937.12px;">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>{{ expiration_date }}{{ domaintype }}截图</h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                            <li class="breadcrumb-item active">{{ expiration_date }}{{ domaintype }}截图</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h4 class="card-title">今日共添加域名：</h4><p>{{ z_count }}</p>
+                                <h4 class="card-title">已经截图：</h4><p>{{ t_count }}</p>
+                                <h4 class="card-title">未截图：</h4><a href="{% url 'jietu:show_domaintype_expiration_date_no_pic' domaintype expiration_date %}">{{ f_count }}</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    {% for jietu in jietus %}
+                                        <div class="col-sm-6">
+                                            <a href="{% url 'jietu:jietu_detail' jietu.domain.name %}">
+                                                <img src="{{ jietu.image.url }}"
+                                                     class="img-fluid mb-2" alt="white sample">
+                                            </a>
+                                        </div>
+                                    {% empty %}
+                                        <div class="no-post">暂时还没有截图！</div>
+                                    {% endfor %}
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+{% endblock content %}

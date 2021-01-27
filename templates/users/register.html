@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>域名管理系统 | 注册账户</title>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="{% static 'adminlte/plugins/fontawesome-free/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'adminlte/dist/css/adminlte.min.css' %}">
+</head>
+<body class="hold-transition register-page">
+<div class="register-box">
+    <div class="card card-outline card-primary">
+        <div class="card-header text-center">
+            <a href="#" class="h1">注册账户</a>
+        </div>
+        <div class="card-body">
+            <p class="login-box-msg">Register a new membership</p>
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-user"></span>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="用户名" name="username">
+                    <span class="has-error">{{ form_obj.username.errors.0 }}</span>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-envelope"></span>
+                        </div>
+                    </div>
+                    <input type="email" class="form-control" placeholder="邮箱" name="email">
+                    <span class="has-error">{{ form_obj.email.errors.0 }}</span>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-phone"></span>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="手机号" name="mobile_phone">
+                    <span class="has-error">{{ form_obj.mobile_phone.errors.0 }}</span>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+                    <input type="password" class="form-control" placeholder="密码" name="password">
+                    <span class="has-error">{{ form_obj.password.errors.0 }}</span>
+                </div>
+                <div class="input-group mb-3">
+
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+                    <input type="password" class="form-control" placeholder="确认密码" name="r_password">
+                    <span class="has-error">{{ form_obj.r_password.errors.0 }}</span>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <div class="icheck-primary">
+                            <input type="checkbox" id="agreeTerms" name="terms" value="agree">
+                            <label for="agreeTerms">
+                                I agree to the <a href="#">terms</a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-primary btn-block">注册</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="social-auth-links text-center">
+                <a href="#" class="btn btn-block btn-primary">
+                    <i class="fab fa-facebook mr-2"></i>
+                    Sign up using Facebook
+                </a>
+                <a href="#" class="btn btn-block btn-danger">
+                    <i class="fab fa-google-plus mr-2"></i>
+                    Sign up using Google+
+                </a>
+            </div>
+
+            <a href="{% url 'users:login' %}" class="text-center">已经有账户了</a>
+        </div>
+    </div>
+</div>
+<script src="{% static 'adminlte/plugins/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'adminlte/dist/js/adminlte.min.js' %}"></script>
+</body>
+</html>

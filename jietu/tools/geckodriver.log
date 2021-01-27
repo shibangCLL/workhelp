@@ -1,0 +1,71 @@
+1611651306498	geckodriver	INFO	Listening on 127.0.0.1:52642
+1611651309554	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--log-level=3" "-foreground" "-no-remote" "-profile" "C:\\Users\\H\\AppData\\Local\\Temp\\rust_mozprofileUGidEE"
+*** You are running in headless mode.
+JavaScript error: ok0bl45crcg.cfg, line 2: ReferenceError: Components is not defined
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611651312348	Marionette	INFO	Listening on port 52652
+1611651312829	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://web.archive.org/web/20200924060326js_/https://www.zyciestolicy.pl/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1, line 14: ReferenceError: jQuery is not defined
+JavaScript error: https://web.archive.org/web/20191223074443/http://www.zwoelfseiten.de/, line 112: ReferenceError: $ is not defined
+JavaScript error: https://web.archive.org/web/20191223074443/http://www.zwoelfseiten.de/, line 124: ReferenceError: $ is not defined
+JavaScript error: https://web.archive.org/web/20191223074443/http://www.zwoelfseiten.de/, line 142: ReferenceError: $ is not defined
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript warning: https://archive.org/includes/jquery-1.10.2.min.js?v1.10.2, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://web.archive.org/web/20190130023923js_/http://www.zubarstvinapovlu.cz/scripts/modernizr-2.5.3-respond-1.1.0.min.js, line 16: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://web.archive.org/web/20190130023923js_/http://www.zubarstvinapovlu.cz/scripts/modernizr-2.5.3-respond-1.1.0.min.js, line 16: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://web.archive.org/web/20190130023923js_/http://www.zubarstvinapovlu.cz/scripts/modernizr-2.5.3-respond-1.1.0.min.js, line 16: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://web.archive.org/web/20190130023923js_/http://www.zubarstvinapovlu.cz/scripts/modernizr-2.5.3-respond-1.1.0.min.js, line 16: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://archive.org/includes/jquery-1.10.2.min.js?v1.10.2, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://archive.org/includes/jquery-1.10.2.min.js?v1.10.2, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://web.archive.org/web/20180819151641js_/http://www.ziwotec.de/min/?f=/includes/templates/schuhe-de/jscript/jscript_form.js,/includes/templates/schuhe-de/jscript/jscript_jquery.js,/includes/templates/schuhe-de/jscript/jscript_jquery161.js,/includes/templates/schuhe-de/jscript/jscript_jquery_slider.js,/includes/templates/schuhe-de/jscript/jscript_products_compare.js,/includes/templates/schuhe-de/jscript/jscript_scrolltop.js&1516005395, line 18: unreachable code after return statement
+JavaScript warning: https://archive.org/includes/jquery-1.10.2.min.js?v1.10.2, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://web.archive.org/web/20190822083756/https://www.googletagmanager.com/gtm.js?id=GTM-5NPV6R, line 246: uncaught exception: [object Object]
+JavaScript error: https://web.archive.org/web/20190822083756/https://www.googletagmanager.com/gtm.js?id=GTM-5NPV6R, line 246: uncaught exception: [object Object]
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript warning: https://web.archive.org/web/20181229094524js_/http://zentrum-heilung.de/wp-includes/js/jquery/jquery3e5a.js?ver=1.10.2, line 14: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: https://web.archive.org/web/20191112040837/http://www.zeitengang.de/, line 113: ReferenceError: $ is not defined
+JavaScript error: https://web.archive.org/web/20191112040837/http://www.zeitengang.de/, line 125: ReferenceError: $ is not defined
+JavaScript error: https://web.archive.org/web/20191112040837/http://www.zeitengang.de/, line 142: ReferenceError: $ is not defined
+JavaScript error: https://web.archive.org/web/20191112040837/http://www.zeitengang.de/, line 745: ReferenceError: Swiper is not defined
+1611652026191	geckodriver	INFO	Listening on 127.0.0.1:53985
+1611652029221	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--log-level=3" "-foreground" "-no-remote" "-profile" "C:\\Users\\H\\AppData\\Local\\Temp\\rust_mozprofileTmNPsY"
+*** You are running in headless mode.
+JavaScript error: ok0bl45crcg.cfg, line 2: ReferenceError: Components is not defined
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611652032331	Marionette	INFO	Listening on port 54000
+1611652032510	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://web.archive.org/web/20201022121916js_/https://www.zyciestolicy.pl/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1, line 14: ReferenceError: jQuery is not defined
+JavaScript warning: https://web.archive.org/web/20201022121916js_/https://www.googletagmanager.com/gtag/js?id=UA-43253216-8, line 99: unreachable code after return statement
+JavaScript warning: https://web.archive.org/web/20201022121916js_/https://www.googletagmanager.com/gtag/js?id=UA-43253216-8, line 159: unreachable code after return statement
+JavaScript warning: https://web.archive.org/web/20201022121916js_/https://www.googletagmanager.com/gtag/js?id=UA-43253216-8, line 159: unreachable code after return statement
+JavaScript warning: https://web.archive.org/web/20201022121916js_/https://www.googletagmanager.com/gtag/js?id=UA-43253216-8, line 159: unreachable code after return statement
+JavaScript warning: https://web.archive.org/web/20201022121916js_/https://www.googletagmanager.com/gtag/js?id=UA-43253216-8, line 99: unreachable code after return statement
+JavaScript warning: https://web.archive.org/web/20201022121916js_/https://www.googletagmanager.com/gtag/js?id=UA-43253216-8, line 159: unreachable code after return statement
+JavaScript error: https://web.archive.org/web/20201022121916js_/https://www.zyciestolicy.pl/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70, line 26: ReferenceError: jQuery is not defined
+JavaScript error: https://web.archive.org/web/20201022121916js_/https://www.zyciestolicy.pl/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4, line 23: ReferenceError: jQuery is not defined
+JavaScript error: https://web.archive.org/web/20201022121916js_/https://www.zyciestolicy.pl/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4, line 23: ReferenceError: jQuery is not defined
+JavaScript error: https://web.archive.org/web/20201022121916js_/https://www.zyciestolicy.pl/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.4, line 23: ReferenceError: jQuery is not defined
+JavaScript error: https://web.archive.org/web/20201022121916js_/https://www.zyciestolicy.pl/wp-includes/js/jquery/ui/sortable.min.js?ver=1.11.4, line 23: ReferenceError: jQuery is not defined
+JavaScript error: https://web.archive.org/web/20201022121916/https://www.zyciestolicy.pl/, line 2679: ReferenceError: moment is not defined
+JavaScript error: https://web.archive.org/web/20201022121916js_/https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/locale/pl.js?ver=1.0, line 48: TypeError: moment is undefined
+1611652147092	geckodriver	INFO	Listening on 127.0.0.1:54270
+1611652150129	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--log-level=3" "-foreground" "-no-remote" "-profile" "C:\\Users\\H\\AppData\\Local\\Temp\\rust_mozprofileHxfkxP"
+JavaScript error: ok0bl45crcg.cfg, line 2: ReferenceError: Components is not defined
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611652153833	Marionette	INFO	Listening on port 54282
+1611652154030	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://web.archive.org/web/20201022121916js_/https://www.zyciestolicy.pl/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1, line 14: ReferenceError: jQuery is not defined
+JavaScript warning: https://web.archive.org/web/20201022121916js_/https://www.googletagmanager.com/gtag/js?id=UA-43253216-8, line 99: unreachable code after return statement
+JavaScript warning: https://web.archive.org/web/20201022121916js_/https://www.googletagmanager.com/gtag/js?id=UA-43253216-8, line 159: unreachable code after return statement
+JavaScript warning: https://web.archive.org/web/20201022121916js_/https://www.googletagmanager.com/gtag/js?id=UA-43253216-8, line 159: unreachable code after return statement
+JavaScript warning: https://web.archive.org/web/20201022121916js_/https://www.googletagmanager.com/gtag/js?id=UA-43253216-8, line 159: unreachable code after return statement
+JavaScript warning: https://web.archive.org/web/20201022121916js_/https://www.googletagmanager.com/gtag/js?id=UA-43253216-8, line 99: unreachable code after return statement
+JavaScript warning: https://web.archive.org/web/20201022121916js_/https://www.googletagmanager.com/gtag/js?id=UA-43253216-8, line 159: unreachable code after return statement
+JavaScript error: https://web.archive.org/web/20201022121916js_/https://www.zyciestolicy.pl/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70, line 26: ReferenceError: jQuery is not defined

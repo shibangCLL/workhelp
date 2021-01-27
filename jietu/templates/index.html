@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    {% for domain in domain_list %}
+        <li>{{ domain.expiration_date }}</li>
+    {% empty %}
+        <div class="no-post">暂时还没有banner图片！</div>
+    {% endfor %}
+    {% for jietu in jietu_list %}
+        <img src="{{ jietu.image.url }}"/>
+    {% empty %}
+        <div class="no-post">暂时还没有banner图片！</div>
+    {% endfor %}
+
+</div>
+</body>
+</html>
